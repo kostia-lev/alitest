@@ -28,7 +28,8 @@ export class TasksComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  taskClicked(i: number) {
+  taskClicked(task: ITask) {
+    const i = this.tasks.findIndex((taskLoc) => taskLoc.id === task.id);
     this.tasks[i] = {...this.tasks[i], done: !this.tasks[i].done};
   }
 
