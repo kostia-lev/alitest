@@ -30,7 +30,7 @@ export class TaskComponent implements OnInit, OnDestroy {
   constructor() { }
 
   ngOnInit(): void {
-    this.clickSubjectSub = this.clickSubject.pipe(throttleTime(500)).subscribe(() => {
+    this.clickSubjectSub = this.clickSubject.pipe(debounceTime(500)).subscribe(() => {
       this.click.emit();
     })
   }
