@@ -1,0 +1,6 @@
+<div *ngIf="task" class="task" [ngClass]="{'done': task.done}">
+    <div class="title">{{task.name}}</div>
+    <div>{{task.description}}</div>
+    <div><button (click)="taskClick($event)">{{task.done ? 'reset' : 'done'}}</button></div>
+    <hr />
+</div>

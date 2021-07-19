@@ -1,0 +1,10 @@
+<button class="buttonFulfilled" (click)="showAll = !showAll" type="button">{{showAll ? 'Show fulfilled' : 'Hide fulfilled'}}</button>
+<form [formGroup]="form">
+    <input class="input" placeholder="name" id="name" type="text" formControlName="name">
+    <input class="input" placeholder="description" id="description" type="text" formControlName="description">
+    <button class="marginTop" type="button" *ngIf="form.valid" (click)="addTask($event)">add task</button>
+</form>
+<hr/>
+<app-task (click)="taskClicked(i)"
+          [task]="task"
+          *ngFor="let task of tasks | filterDone : showAll; let i = index; trackBy: trackByFn"></app-task>

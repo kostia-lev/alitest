@@ -1,0 +1,15 @@
+.task.done {
+    color: gray;
+}
+
+.task {
+    color: black;
+}
+
+.button {
+    color: black;
+}
+
+.title {
+    font-weight: bolder;
+}
