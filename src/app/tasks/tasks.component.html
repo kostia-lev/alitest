@@ -1,4 +1,5 @@
-<button class="buttonFulfilled" (click)="showAll = !showAll" type="button">{{showAll ? 'Show fulfilled' : 'Hide fulfilled'}}</button>
+<button class="buttonFulfilled" (click)="showAll = !showAll" type="button">
+    {{showAll ? 'Hide fulfilled' : 'Show fulfilled'}}</button>
 <form [formGroup]="form">
     <input class="input" placeholder="name" id="name" type="text" formControlName="name">
     <input class="input" placeholder="description" id="description" type="text" formControlName="description">
